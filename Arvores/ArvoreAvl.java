@@ -322,6 +322,7 @@ static int cont = 0 ;
  */
 
 /* Para fazer o caso medio (foram execultadas 10x e colocado no exel) */
+/* pelo tamanho dos dados adicionado a arvore AVL Buga as vezes */
         Integer[] array = new Integer[1000];
         for (int i = 0; i < 1000; i++) {
             array[i] = i;
