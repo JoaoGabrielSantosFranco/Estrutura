@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 import java.util.function.Consumer;
 
 public class ArvoreRubroNegra<T extends Comparable<T>> {
@@ -304,31 +308,29 @@ public class ArvoreRubroNegra<T extends Comparable<T>> {
     public static void main(String args[]) {
         ArvoreRubroNegra<Integer> a = new ArvoreRubroNegra<>();
 
-        for (int i = 0; i < 1000; i++) {
-            a.adicionar(i);
-            System.out.println(cont);
-
-            ArvoreRubroNegra<> b = new ArvoreRubroNegra<>();
-            int v[] = new int[1000];
-            while (v[1000] == 0) {
-
-                int random = (int) (Math.random() * 1000);
-                a.pesquisar(b, random);
-                v[i] = random;
-
-            }
-
-        }
         /*
-         * Criar uma forma de adicionar random,mas precisa comparar se o elemento ja
-         * existe antes
-         * se o elemento existe não adiciona
-         * se ele não existe adiciona
-         * criar uma lista e utilizando whille enquando a lista for menor que 1000 vai
-         * repetindo
+         * for (int i = 0; i < 1000; i++) {
+         * a.adicionar(i);
+         * System.out.println(cont);
          */
+        Integer[] array = new Integer[1000];
+        for (int i = 0; i < 1000; i++) {
+            array[i] = i;
+        }
+        
+        List<Integer> list = Arrays.asList(array);
+        Collections.shuffle(list);
+        list.toArray(array);
+        Integer[] integers = list.toArray(new Integer[1000]);
 
-        // System.out.println("Altura da arvore: " + (a.altura(a.raiz) + 1));
-
+        
+        for (int i = 0; i < 1000; i++) {
+            a.adicionar(integers[i]);
+            System.out.println(cont);
+        }
+        
     }
+
+    
+
 }

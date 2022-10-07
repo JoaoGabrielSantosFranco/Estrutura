@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.function.Consumer;
 
 public class ArvoreAvl<T extends Comparable<T>> {
@@ -335,9 +338,27 @@ static int cont = 0 ;
         // a.adicionar(1);
         // a.adicionar(4);
 
-
+/*
         for (int i = 1; i <= 1000; i++) {
             a.adicionar(i);
+            System.out.println(cont);
+        }
+ */
+
+
+        Integer[] array = new Integer[1000];
+        for (int i = 0; i < 1000; i++) {
+            array[i] = i;
+        }
+        
+        List<Integer> list = Arrays.asList(array);
+        Collections.shuffle(list);
+        list.toArray(array);
+        Integer[] integers = list.toArray(new Integer[1000]);
+
+        
+        for (int i = 0; i < 1000; i++) {
+            a.adicionar(integers[i]);
             System.out.println(cont);
         }
 
