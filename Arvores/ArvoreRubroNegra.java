@@ -308,11 +308,17 @@ public class ArvoreRubroNegra<T extends Comparable<T>> {
     public static void main(String args[]) {
         ArvoreRubroNegra<Integer> a = new ArvoreRubroNegra<>();
 
-        /*
+        /* Para fazer o pior caso
          * for (int i = 0; i < 1000; i++) {
          * a.adicionar(i);
          * System.out.println(cont);
          */
+
+
+
+
+         
+/* Para fazer o caso medio (foram execultadas 10x e colocado no exel) */
         Integer[] array = new Integer[1000];
         for (int i = 0; i < 1000; i++) {
             array[i] = i;

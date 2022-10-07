@@ -313,39 +313,15 @@ static int cont = 0 ;
 
     public static void main(String args[]) {
         ArvoreAvl<Integer> a = new ArvoreAvl<>();
-        
-        // for (int i = 0; i < 7; i++) {
-        //     a.adicionar(i + 1);
-        // }
 
-        // for (int i = 7; i >= 1; i--) {
-        //     a.adicionar(i);
-        // }
-
-        // a.adicionar(3);
-        // a.adicionar(1);
-        // a.adicionar(2);
-        // a.adicionar(4);
-        // a.adicionar(5);
-        // a.adicionar(7);
-        // a.adicionar(6);
-
-        // a.adicionar(5);
-        // a.adicionar(7);
-        // a.adicionar(6);
-        // a.adicionar(2);
-        // a.adicionar(3);
-        // a.adicionar(1);
-        // a.adicionar(4);
-
-/*
+/* Para fazer o Pior Caso
         for (int i = 1; i <= 1000; i++) {
             a.adicionar(i);
             System.out.println(cont);
         }
  */
 
-
+/* Para fazer o caso medio (foram execultadas 10x e colocado no exel) */
         Integer[] array = new Integer[1000];
         for (int i = 0; i < 1000; i++) {
             array[i] = i;
@@ -362,6 +338,8 @@ static int cont = 0 ;
             System.out.println(cont);
         }
 
+
+        
         //System.out.println("Altura da arvore: " + (a.altura(a.raiz) + 1));
     }
 }
